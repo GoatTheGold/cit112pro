@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <script>
+    function displayContactInfo() {
+      var name = document.forms["contactForm"]["name"].value;
+      var email = document.forms["contactForm"]["email"].value;
+      var message = document.forms["contactForm"]["message"].value;
+
+      var infoContainer = document.getElementById("contactInfo");
+      infoContainer.innerHTML = "<h3>Contact Information:</h3>" +
+                                "<p><strong>Name:</strong> " + name + "</p>" +
+                                "<p><strong>Email:</strong> " + email + "</p>" +
+                                "<p><strong>Message:</strong> " + message + "</p>";
+    }
+  </script>
+  <style>
+    body{
+    /*  background-image: url("talal images/background.jpeg" );*/
+    background-color:rgb(232, 218, 196);}
+    .logo-header {
+      width: 1000px;
+      height: 155px;
+      top: 100px;
+      
+    }
+    .continer {
+     margin: 1em auto 1em auto;
+     max-width: 100%;
+     width: 1000px;
+     background-color: aliceblue;
+     
+      
+    }
+    .fr1{
+      display: block;
+      background-color: rgb(54, 51, 51);
+      padding: 0px;
+      text-align: center
+      ;
+      text-decoration: none;
+      position: relative;
+      top: -1.3em;
+      
+    }
+    .fr1 p{
+             display: inline-block;
+             margin: 1em;
+             color: aliceblue;
+    }
+    .fr1 a{
+      position: relative;
+      font-size: 1em;
+      font-weight: 500;
+      text-decoration: none;
+      color: azure;
+      padding: 0 23px;
+      
+    }
+    footer{
+      background-color: rgb(43, 42, 43);
+      color: aliceblue;
+      font-size: 1em;
+      text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="continer">
+    <header>
+        <!-- Logo in the header section -->
+        
+          <img src="/banner.jpg" alt="Logo Header" class="logo-header">
+          </header>
+          <nav class="fr1">
+            <!-- Navigation menu -->
+            <ul class="talo1">
+              <p><a href="https://www.dcc.kfupm.edu.sa" target="_blank">offical website</a></p>
+              <p><a href="#" target="_blank">GPA calculator</a></p>
+              <p><a href="#" target="_blank">sis web</a></p>
+              <p><a href="#" target="_blank">Contact</a></p>
+              <p><a href="#" target="_blank">majors</a></p>
+              <p><a href="#" target="_blank">Location</a></p>
+            </ul>
+          </nav>
+  <h2>Contact Us</h2>
+  <form name="contactForm" onsubmit="event.preventDefault(); displayContactInfo();" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <footer>
+    <!-- Footer section with the footer logo -->
+   <!-- <div>
+      <img src="talal images/logo-footer.png" alt="Logo Footer" class="logo-footer">
+    </div>-->
+    <p>&copy; 2023 My Website. Dammam Community College( DCC).</p>
+  </footer>
+ </div>
+</body>
+</html>
