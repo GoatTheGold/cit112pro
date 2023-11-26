@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>title</title>
+    <style>
+        
+        body
+        {
+            background: linear-gradient(to top, #f4f4ec 80%, #DEDECA 100%);
+        }
+
+        .container {
+            margin: 1em auto 1em auto;
+            max-width: 100%;
+            width: fit-content;
+            text-align: center;
+        }
+
+        header {
+            border: black solid 2px;
+            margin-bottom: 5px;
+            background-image: url(banner.jpg);
+            background-size: 45em;
+            max-height: 10em;
+            height: 6.5em;
+        }
+
+        .Nav{
+            border: black solid 2px;
+            color: white;
+            background: linear-gradient(to bottom, #9d2a23 0%, #df473a 100%);
+        }
+
+        footer {
+            border: black solid 2px;
+            clear: both;
+            background: linear-gradient(to top, #535456 0%, #6c6c6e 100%);
+            color: #DEDECA;
+        }
+
+        article {
+            margin: 1em 0em 1em 0em;
+            height: 50em;
+            width: 45em;
+            border: black solid 2px;
+            background: white;
+        }
+
+        .P1
+        {
+            text-align: left;
+            margin: 0 1em 1em 8em;
+            float: left;
+        }
+
+        .P2
+        {
+            text-align: left;
+            margin: 0 8em 1em 1em;
+            float: right;
+        }
+
+        table th, table td
+        {
+            width: 10em;
+            height: 3.5em;
+        }
+
+        table, th, td
+        {
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table input
+        {
+            width: 8em;
+            height: 2em;
+            background: #e6eed7;
+        }
+
+        table th
+        {
+            background: #859027;
+            color: white;
+        }
+
+        table tr
+        {
+            background: #dde9c6;
+        }
+        .fr1 p{
+            display: inline-block;
+            margin: 1em;
+
+        }
+        .fr1{
+            background-color: #535456;
+            
+        }
+        .fr1 a{
+          
+            font-size: 1em;
+      font-weight: 500;
+      text-decoration: none;
+      color: azure;
+      /*padding: 0 23px;*/
+      
+        }
+
+    </style>
+    
+    <datalist id="browsers">
+        <option value="A+">
+        <option value="A">
+        <option value="B+">
+        <option value="B">
+        <option value="C+">
+        <option value="C">
+        <option value="D+">
+        <option value="D">
+        <option value="F">
+    </datalist>
+      
+  </head>
+  <body>
+    <div class="container">
+
+        <header>
+        </header>
+
+        <nav class="fr1">
+            <!-- Navigation menu -->
+            <ul class="talo1">
+              <p><a href="https://www.dcc.kfupm.edu.sa" target="_blank">offical website</a></p>
+              <!--<p><a href="/GPACUL.html" target="_blank">GPA calculator</a></p>-->
+              <p><a href="https://www.dcc.kfupm.edu.sa/sisweb/" target="_blank">sis web</a></p>
+              <p><a href="Untitled-15.html" target="_blank">Contact</a></p>
+              <p><a href="#" target="_blank">majors</a></p>
+              <p><a href="#" target="_blank">Location</a></p>
+            </ul>
+          </nav>
+  
+        <article>
+            <h1>GPA Calculator</h1>
+            <p class="P1">Attempt Hours:<span id="SH2"></span></br>
+            </br>
+                Total Credit: <span id="SC2"></span>
+            </p>
+
+            <p>GPA out of: 4</p>
+            <p>Cumulative GPA:<span id="GPA"></span></p>
+            </br>
+            </br>
+            </br>
+
+            <table class="TL">
+                <tr>
+                    <th>
+                        Course
+                    </th>
+                    <th>
+                        Hours
+                    </th>
+                    <th>
+                        Grade
+                    </th>
+                    <th>
+                        Credit
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"> </input>
+                    </td>
+                    <td>
+                        <input type="text" id="H1" onchange="f(1)"></input>
+                    </td>
+                    <td>
+                        <input list="browsers" id="G1" onchange="f(1)">
+                    </td>
+                    <td>
+                        <p id="C1"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"> </input>
+                    </td>
+                    <td>
+                        <input type="text" id="H2" onchange="f(2)"> </input>
+                    </td>
+                    <td>
+                        <input list="browsers" id="G2" onchange="f(2)">
+                    </td>
+                    <td>
+                        <p id="C2"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"> </input>
+                    </td>
+                    <td>
+                        <input type="text" id="H3" onchange="f(3)"> </input>
+                    </td>
+                    <td>
+                        <input list="browsers" id="G3" onchange="f(3)">
+                    </td>
+                    <td>
+                        <p id="C3"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"> </input>
+                    </td>
+                    <td>
+                        <input type="text" id="H4" onchange="f(4)"> </input>
+                    </td>
+                    <td>
+                        <input list="browsers" id="G4" onchange="f(4)">
+                    </td>
+                    <td>
+                        <p id="C4"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"> </input>
+                    </td>
+                    <td>
+                        <input type="text" id="H5" onchange="f(5)"> </input>
+                    </td>
+                    <td>
+                        <input list="browsers" id="G5" onchange="f(5)">
+                    </td>
+                    <td>
+                        <p id="C5"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"> </input>
+                    </td>
+                    <td>
+                        <input type="text" id="H6" onchange="f(6)"> </input>
+                    </td>
+                    <td>
+                        <input list="browsers" id="G6" onchange="f(6)">
+                    </td>
+                    <td>
+                        <p id="C6"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sum:
+                    </td>
+                    <td>
+                        <P id="SH"> </P>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <P id="SC"> </P>
+                    </td>
+                </tr>
+            </table>
+        </article>
+
+
+        <footer>
+            <p>&copy; 2023 My Website. Dammam Community College( DCC).</p>
+        </footer>
+   </div>
+
+   <script>
+    function f(elementId) {
+        var creditSum = 0;
+        var hourSum = 0;
+
+        for (var i = 1; i <= elementId; i++) {
+            var H = parseFloat(document.getElementById("H" + i).value);
+            var G = document.getElementById("G" + i).value;
+            var C = calculateCredit(H, G);
+
+            document.getElementById("C" + i).innerHTML = C;
+            creditSum += C;
+
+            if (H !== "") {
+                hourSum += H;
+            }
+            var GPA = creditSum/hourSum;
+        }
+
+        document.getElementById("SC").innerHTML = creditSum;
+        document.getElementById("SC2").innerHTML = creditSum;
+
+        document.getElementById("SH").innerHTML = hourSum;
+        document.getElementById("SH2").innerHTML = hourSum;
+        
+        document.getElementById("GPA").innerHTML = GPA;
+    }
+
+    function calculateCredit(hours, grade) {
+        if (hours !== "" && grade !== "") {
+            if (grade == "A+") {
+                return hours * 4;
+            } else if (grade == "A") {
+                return hours * 3.75;
+            } else if (grade == "B+") {
+                return hours * 3.5;
+            } else if (grade == "B") {
+                return hours * 3;
+            } else if (grade == "C+") {
+                return hours * 2.5;
+            } else if (grade == "C") {
+                return hours * 2;
+            } else if (grade == "D+") {
+                return hours * 1.5;
+            } else if (grade == "D") {
+                return hours * 1;
+            } else if (grade == "F") {
+                return hours * 0;
+            }
+        }
+        return 0;
+    }
+</script>
+
+  </body>
+</html>
